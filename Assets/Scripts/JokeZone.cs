@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class CardZone : MonoBehaviour, IDropHandler
+public class JokeZone : MonoBehaviour, IDropHandler
 {
-
+    public bool isPunchline;
 
    //Triggers before OnEndDrag of the card class.
     public void OnDrop(PointerEventData eventData)
@@ -13,7 +13,7 @@ public class CardZone : MonoBehaviour, IDropHandler
         GameObject card = eventData.pointerDrag.gameObject;
 
         // make sure to check if its possible
-          card.GetComponent<Card>().droppedOnZoneFlag = true;
+          card.GetComponent<CardGameObject>().droppedOnZoneFlag = true;
           card.transform.SetParent(this.transform);
     }
 }

@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class CardGameObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
 
    private Vector2   dragOffset;
    public  Transform handPanel;
    public  bool droppedOnZoneFlag;
+   public CardBase card;
+
 
     public void Start()
     {

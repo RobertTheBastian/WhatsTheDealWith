@@ -6,4 +6,10 @@ using UnityEngine;
 public class CombatManager : MonoBehaviour
 {
 
+
+    public void DeliverJoke()
+    {
+        
+        Debug.Log("tell Joke");
+    }
 }
